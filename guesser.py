@@ -29,3 +29,24 @@ if level == 'noob':
         if num_of_chance == 0:
             print(f"Sorry you could not guess the correct number. The correct number is {computer_number}.")
             flag = True
+
+elif level =='pro':
+    num_of_chance = 4
+    flag = False
+    while flag == False:
+        guess = int(input("Make a guess: "))
+
+        if computer_number == guess:
+            print("You guessed the correct number.")
+            flag = True
+        elif computer_number > guess:
+            print(f"You guessed low. Now you have {num_of_chance} tries left.")
+        
+        else:
+            print(f"You guessed high. Now you have {num_of_chance} tries left.")
+        
+        num_of_chance = num_of_chance - 1
+
+        if num_of_chance == 0:
+            print(f"Sorry you could not guess the correct number. The correct number is {computer_number}.")
+            flag = True
